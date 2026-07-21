@@ -79,6 +79,7 @@ section { scroll-margin-top: 70px; }
 .home__cover {
   position: absolute; top: 0; left: 0;
   width: 74%; height: 76%;
+  z-index: 1;
   box-shadow: 0 20px 50px rgba(35,66,140,.20);
 }
 .home__photo {
@@ -90,7 +91,7 @@ section { scroll-margin-top: 70px; }
     radial-gradient(90% 120% at 30% 70%, rgba(200,120,150,.45) 0%, rgba(200,120,150,0) 50%),
     linear-gradient(150deg, #2f52a8 0%, #3f66c4 50%, #5478d0 100%);*/
 }
-.home__caption { position: absolute; inset: 0; padding: clamp(18px, 3vw, 34px); color: #fff; }
+.home__caption { position: absolute; inset: 0; padding: clamp(18px, 3vw, 34px); color: #fff; z-index: 2; }
 .home__title {
   font-family: "Poppins", sans-serif; font-weight: 400;
   font-size: clamp(20px, 3vw, 38px); letter-spacing: 2px; line-height: 1.25;
@@ -118,15 +119,19 @@ section { scroll-margin-top: 70px; }
 
 /* PORTFOLIO ワードマーク */
 .home__wordmark {
-  position: absolute; left: 8%; bottom: 2%;
+  position: absolute; left: clamp(18px, 5vw, 72px); bottom: clamp(8px, 4vw, 44px);
   font-family: "Poppins", sans-serif; font-weight: 700;
   font-size: clamp(48px, 9vw, 128px); letter-spacing: clamp(4px, 1.2vw, 18px);
   line-height: 1;
   background: var(--grad-orange);
   -webkit-background-clip: text; background-clip: text; color: transparent;
+  -webkit-text-stroke: 1px rgba(255,255,255,.55);
+  text-shadow: 0 6px 18px rgba(35,66,140,.22);
+  z-index: 3;
 }
 .home__dots {
   position: absolute; left: 4%; bottom: 8%; width: 2px; height: 20%;
+  z-index: 3;
   border-left: 2px solid var(--blue-soft);
 }
 .home__dots::before {
@@ -297,9 +302,26 @@ section { scroll-margin-top: 70px; }
   .index__grid { grid-template-columns: 1fr; }
   .index__logo { order: -1; }
   .index__circle { width: min(60%, 320px); }
-  .home__wordmark { bottom: 2%; }
+  .home__wordmark { left: 8%; bottom: 2%; }
   .home__catch { font-size: 15px; }
 }
+
+@media (min-width: 861px) {
+  .home__wordmark {
+    left: 30%;
+    bottom: 22%;
+    transform: translateY(12%);
+  }
+  .home__catch {
+    top: 0;
+  }
+  .home__year {
+    top: clamp(20px, 3vw, 36px);
+    right: clamp(20px, 3vw, 36px);
+    bottom: auto;
+  }
+}
+
 @media (max-width: 560px) {
   .nav__menu { gap: 14px; }
   .skills { grid-template-columns: 1fr; }
