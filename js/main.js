@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
      data-work ごとのパスに変えるか、この分岐を消してください。 */
   const workPages = {
      "01": "works/picapon.html",
-    // "02": "works/daijobu.html",
-    // "03": "works/putica.html",
-    // "04": "works/patacle.html",
-    // "05": "works/kamikke.html",
-    // "06": "works/others.html",
+     "02": "works/daijobu.html",
+     "03": "works/putica.html",
+     "04": "works/patacle.html",
+     "05": "works/kamikke.html",
+     "06": "works/others.html",
   };
 
   document.querySelectorAll(".work__link").forEach((link) => {
