@@ -1,0 +1,309 @@
+/* ============================================================
+   Rihoko Kato Portfolio 2026  -  style.css
+   カラー / フォント / 各セクションのレイアウト
+   ============================================================ */
+
+:root {
+  --navy:        #23428c;   /* 見出しの濃い青 */
+  --blue:        #4a63b0;   /* 本文寄りの青   */
+  --blue-soft:   #8fa3d6;   /* 淡い青         */
+  --blue-pale:   #c2cff0;   /* さらに淡い青   */
+  --orange:      #f0a04b;   /* アクセントの橙 */
+  --orange-deep: #e07b2e;
+  --ink:         #3a4a72;   /* テキスト       */
+  --ink-soft:    #7c89ad;   /* 薄いテキスト   */
+  --bg:          #ffffff;
+  --grad-blue:   linear-gradient(135deg, #8fa3d6 0%, #4a63b0 100%);
+  --grad-orange: linear-gradient(135deg, #f6c17a 0%, #e07b2e 100%);
+  --grad-mix:    linear-gradient(120deg, #4a63b0 0%, #8fa3d6 45%, #f0a04b 100%);
+  --maxw: 1180px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Noto Sans JP", "Poppins", sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+section { scroll-margin-top: 70px; }
+
+/* ---------- ナビ ---------- */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px clamp(20px, 5vw, 48px);
+  background: rgba(255,255,255,.72);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(74,99,176,.12);
+}
+.nav__logo {
+  font-family: "Quicksand", sans-serif; font-weight: 700;
+  font-size: 20px; letter-spacing: 1px;
+  color: var(--navy); text-decoration: none;
+}
+.nav__menu { display: flex; gap: clamp(16px, 3vw, 34px); list-style: none; }
+.nav__menu a {
+  font-family: "Poppins", sans-serif; font-weight: 500; font-size: 14px;
+  letter-spacing: 1px; color: var(--ink); text-decoration: none;
+  position: relative; padding-bottom: 3px;
+}
+.nav__menu a::after {
+  content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 2px;
+  background: var(--grad-orange); transition: width .25s ease;
+}
+.nav__menu a:hover { color: var(--navy); }
+.nav__menu a:hover::after { width: 100%; }
+
+/* ============================================================
+   01  HOME / 表紙
+   ============================================================ */
+.home {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  padding: 96px clamp(20px, 5vw, 60px) 60px;
+  position: relative; overflow: hidden;
+}
+.home__inner {
+  position: relative;
+  width: 100%; max-width: var(--maxw);
+  aspect-ratio: 1414 / 1000;         /* A4横に近い比率 */
+}
+
+/* 表紙の画像枠 */
+.home__cover {
+  position: absolute; top: 0; left: 0;
+  width: 74%; height: 76%;
+  box-shadow: 0 20px 50px rgba(35,66,140,.20);
+}
+.home__photo {
+  width: 100%; height: 100%;
+  /* あとで assets/img/cover.jpg に差し替え → 下の background をコメントの行に */
+  /* background: url("../assets/img/cover.jpg") center/cover no-repeat; */
+  background:
+    radial-gradient(120% 90% at 65% 40%, rgba(240,160,120,.55) 0%, rgba(240,160,120,0) 45%),
+    radial-gradient(90% 120% at 30% 70%, rgba(200,120,150,.45) 0%, rgba(200,120,150,0) 50%),
+    linear-gradient(150deg, #2f52a8 0%, #3f66c4 50%, #5478d0 100%);
+}
+.home__caption { position: absolute; inset: 0; padding: clamp(18px, 3vw, 34px); color: #fff; }
+.home__title {
+  font-family: "Poppins", sans-serif; font-weight: 400;
+  font-size: clamp(20px, 3vw, 38px); letter-spacing: 2px; line-height: 1.25;
+}
+.home__name {
+  font-family: "Poppins", sans-serif; font-weight: 300;
+  font-size: clamp(13px, 1.4vw, 18px); letter-spacing: 2px; margin-top: 10px;
+}
+.home__year {
+  position: absolute; right: clamp(18px, 3vw, 34px); bottom: clamp(14px, 2.5vw, 26px);
+  font-family: "Poppins", sans-serif; font-weight: 300;
+  font-size: clamp(22px, 3vw, 40px); letter-spacing: 3px;
+}
+
+/* 縦書きキャッチ */
+.home__catch {
+  position: absolute; top: 6%; right: 3%;
+  writing-mode: vertical-rl; text-orientation: upright;
+  display: flex; gap: clamp(6px, 1vw, 16px);
+  padding: clamp(16px, 2.5vw, 30px) clamp(14px, 2vw, 24px);
+  background: rgba(143,163,214,.42);
+  font-weight: 500; letter-spacing: .35em;
+  font-size: clamp(15px, 2vw, 26px); color: #33436f;
+}
+
+/* PORTFOLIO ワードマーク */
+.home__wordmark {
+  position: absolute; left: 8%; bottom: -2%;
+  font-family: "Poppins", sans-serif; font-weight: 700;
+  font-size: clamp(48px, 9vw, 128px); letter-spacing: clamp(4px, 1.2vw, 18px);
+  line-height: 1;
+  background: var(--grad-orange);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.home__dots {
+  position: absolute; left: 4%; bottom: 8%; width: 2px; height: 20%;
+  border-left: 2px solid var(--blue-soft);
+}
+.home__dots::before {
+  content: ""; position: absolute; left: -4px; bottom: -14px;
+  width: 8px; height: 8px; border-radius: 50%; background: var(--blue);
+}
+
+/* ============================================================
+   02  ABOUT ME / 自己紹介
+   ============================================================ */
+.about {
+  padding: clamp(60px, 8vw, 110px) clamp(20px, 5vw, 60px);
+  position: relative; overflow: hidden;
+}
+.about::before {   /* 背景のふんわりブロブ */
+  content: ""; position: absolute; top: 12%; left: -6%;
+  width: 340px; height: 340px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, rgba(240,160,120,.30), rgba(143,163,214,.12) 70%);
+  filter: blur(6px); z-index: 0;
+}
+.about__grid {
+  position: relative; z-index: 1;
+  max-width: var(--maxw); margin: 0 auto;
+  display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(28px, 5vw, 64px);
+}
+
+/* 左カラム */
+.about__heading {
+  font-family: "Quicksand", sans-serif; font-weight: 700;
+  font-size: clamp(46px, 8vw, 96px); line-height: .95; letter-spacing: 2px;
+  display: flex; flex-direction: column;
+  background: var(--grad-mix);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  margin-bottom: 28px;
+}
+.about__affiliation { color: var(--blue); font-size: 15px; margin-bottom: 18px; }
+.about__person { display: flex; flex-direction: column; margin-bottom: 26px; }
+.about__jp {
+  font-size: clamp(28px, 4vw, 40px); font-weight: 700; letter-spacing: 4px;
+  background: var(--grad-mix);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.about__en { font-family: "Poppins", sans-serif; font-size: 18px; color: var(--blue); letter-spacing: 2px; }
+
+.about__photo {
+  width: 100%; aspect-ratio: 3 / 4; border-radius: 14px;
+  /* あとで assets/img/profile.jpg に差し替え */
+  /* background: url("../assets/img/profile.jpg") center/cover no-repeat; */
+  background:
+    radial-gradient(80% 60% at 50% 20%, rgba(240,160,120,.35), rgba(240,160,120,0) 60%),
+    var(--grad-blue);
+  box-shadow: 0 16px 40px rgba(35,66,140,.20);
+  display: flex; align-items: flex-end; justify-content: center;
+  color: rgba(255,255,255,.85); font-size: 13px; padding: 14px;
+}
+.about__photo::after { content: "profile photo"; letter-spacing: 1px; }
+
+.about__contact {
+  margin-top: 22px; font-family: "Poppins", sans-serif;
+  font-size: 13px; color: var(--ink-soft); line-height: 1.9;
+}
+
+/* 右カラム：情報ブロック */
+.about__right { display: flex; flex-direction: column; gap: clamp(22px, 3vw, 34px); }
+.info__title {
+  font-family: "Poppins", sans-serif; font-weight: 600;
+  font-size: clamp(18px, 2vw, 24px); letter-spacing: 2px; color: var(--navy);
+  display: flex; align-items: baseline; gap: 2px;
+  position: relative; padding-bottom: 8px; margin-bottom: 10px;
+}
+.info__title .cap {
+  font-size: 1.5em; font-weight: 700;
+  background: var(--grad-orange);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.info__title::after {
+  content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px;
+  background: linear-gradient(90deg, var(--blue-soft), rgba(143,163,214,0));
+}
+.info__lead { font-weight: 700; color: var(--navy); font-size: clamp(15px, 1.7vw, 19px); margin-bottom: 6px; }
+.info__body { color: var(--ink-soft); font-size: 14px; }
+
+/* スキルの星 */
+.skills { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 34px; }
+.skills li { display: flex; align-items: center; justify-content: space-between; }
+.skills__name { color: var(--navy); font-family: "Poppins", sans-serif; font-size: 15px; }
+.skills__stars { display: inline-flex; gap: 2px; }
+.skills__stars i {
+  width: 16px; height: 16px; display: inline-block;
+  -webkit-mask: var(--star) center/contain no-repeat;
+          mask: var(--star) center/contain no-repeat;
+  background: #cfd7ec;                 /* 空の星 */
+}
+.skills__stars i.on   { background: var(--blue); }
+.skills__stars i.half {
+  background: linear-gradient(90deg, var(--blue) 50%, #cfd7ec 50%);
+}
+.skills__stars {
+  --star: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.7 1.4 6.8L12 17.8 5.9 20.5l1.4-6.8L2.2 9l6.9-.7z"/></svg>');
+}
+
+/* ============================================================
+   03  INDEX / 目次
+   ============================================================ */
+.index {
+  padding: clamp(60px, 8vw, 110px) clamp(20px, 5vw, 60px) clamp(80px, 10vw, 140px);
+  background: linear-gradient(180deg, #ffffff 0%, #f4f7ff 100%);
+}
+.index__grid {
+  max-width: var(--maxw); margin: 0 auto;
+  display: grid; grid-template-columns: 0.85fr 1.15fr; gap: clamp(30px, 5vw, 70px);
+  align-items: center;
+}
+
+/* 円ロゴ */
+.index__logo { display: flex; justify-content: center; }
+.index__circle {
+  position: relative; width: min(72%, 400px); aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, #4d6bc0 0%, #2f4c9f 55%, #274088 100%);
+  box-shadow: 0 24px 60px rgba(35,66,140,.30);
+  display: flex; align-items: center; justify-content: center; overflow: hidden;
+}
+.index__circle::before,
+.index__circle::after {   /* 波線の装飾 */
+  content: ""; position: absolute; left: -10%; width: 120%; height: 120%;
+  border-radius: 45%;
+  border-bottom: 2px solid rgba(255,255,255,.35);
+}
+.index__circle::before { top: 8%;  transform: rotate(-8deg); }
+.index__circle::after  { top: 22%; border-bottom-color: rgba(240,160,120,.6); transform: rotate(-4deg); }
+.index__circle span {
+  font-family: "Quicksand", sans-serif; font-weight: 500;
+  font-size: clamp(38px, 6vw, 64px); letter-spacing: 8px; color: #fff; z-index: 1;
+}
+
+/* 作品リスト */
+.works { list-style: none; display: flex; flex-direction: column; gap: clamp(20px, 3vw, 30px); }
+.work { padding-bottom: 6px; }
+.work__link {
+  display: inline-flex; align-items: baseline; gap: 12px; text-decoration: none;
+  transition: transform .2s ease;
+}
+.work__link:hover { transform: translateX(6px); }
+.work__no {
+  font-family: "Poppins", sans-serif; font-weight: 600;
+  font-size: clamp(22px, 2.6vw, 30px); color: var(--navy);
+}
+.work__name {
+  font-family: "Poppins", sans-serif; font-weight: 500;
+  font-size: clamp(22px, 2.6vw, 30px); color: var(--navy);
+  position: relative;
+}
+.work__name::after {
+  content: ""; position: absolute; left: 0; bottom: -2px; width: 0; height: 2px;
+  background: var(--grad-orange); transition: width .25s ease;
+}
+.work__link:hover .work__name::after { width: 100%; }
+.work__tags {
+  margin-top: 6px; color: var(--ink-soft); font-size: 14px;
+  display: flex; flex-wrap: wrap; gap: 4px 18px;
+}
+.work__tags .tag--accent { color: var(--orange-deep); font-weight: 500; }
+
+/* ---------- レスポンシブ ---------- */
+@media (max-width: 860px) {
+  .about__grid,
+  .index__grid { grid-template-columns: 1fr; }
+  .index__logo { order: -1; }
+  .index__circle { width: min(60%, 320px); }
+  .home__wordmark { bottom: 2%; }
+  .home__catch { font-size: 15px; }
+}
+@media (max-width: 560px) {
+  .nav__menu { gap: 14px; }
+  .skills { grid-template-columns: 1fr; }
+  .home__inner { aspect-ratio: 3 / 4; }
+  .home__cover { width: 92%; height: 62%; }
+  .home__catch { top: 2%; right: 2%; }
+}
