@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
      今後 works/picapon.html などを作ったら、下の href を
      data-work ごとのパスに変えるか、この分岐を消してください。 */
   const workPages = {
-    // "01": "works/picapon.html",
+     "01": "works/picapon.html",
     // "02": "works/daijobu.html",
     // "03": "works/putica.html",
     // "04": "works/patacle.html",
