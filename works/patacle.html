@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PATACLE｜Rihoko Kato Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/work.css" />
+  <!-- PATACLE は walnut（くるみ材）の温かいトーン -->
+  <style>
+    :root { --warm: #6b4a2b; --warm-soft: #c9a97e; --cream: #f5efe6; }
+    .phero {
+      background:
+        radial-gradient(120% 80% at 82% 30%, rgba(107,74,43,.14), rgba(107,74,43,0) 55%),
+        linear-gradient(160deg, #f7f2ea 0%, #efe6d7 60%, #e4d5c0 100%);
+    }
+    .phero__logo { font-family: "Poppins", sans-serif; color: #5c3d22; letter-spacing: 8px; text-shadow: 0 6px 18px rgba(92,61,34,.22); }
+    .pillar { background: radial-gradient(circle at 35% 25%, #c9a97e, #6b4a2b); color: #fff; }
+    .answer { background: linear-gradient(135deg, #8a6238, #5c3d22); box-shadow: 0 16px 40px rgba(92,61,34,.3); }
+    .feat__no { background: #c9a97e; color: #4a2f18; }
+    .sec__eyebrow { color: rgba(107,74,43,.18); }
+
+    /* プロモーション動画 */
+    .video-wrap {
+      position: relative; width: 100%; max-width: 860px; margin: 0 auto;
+      aspect-ratio: 16/9; border-radius: 16px; overflow: hidden;
+      background: #2a2018; box-shadow: 0 24px 60px rgba(60,40,20,.35);
+    }
+    .video-wrap video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .video-copy {
+      max-width: 760px; margin: 30px auto 0; text-align: center;
+      color: var(--ink); font-size: clamp(15px,1.9vw,19px); line-height: 2; font-weight: 500;
+    }
+  </style>
+</head>
+<body class="work-page">
+
+  <nav class="work-nav">
+    <a href="../index.html#index" class="back">Index にもどる</a>
+    <span style="color:var(--ink-soft);font-size:13px;">04 / PATACLE</span>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="phero">
+    <div class="phero__grid">
+      <div>
+        <p class="phero__sub">どこか懐かしさを感じる パタパタ と 穏やかな朝</p>
+        <h1 class="phero__logo">PATACLE</h1>
+        <p class="phero__tag">パタパタ × 目覚まし時計<br /><span style="color:var(--warm);font-size:.8em;font-weight:500;">視覚的に楽しめて、ストレスの少ない目覚まし時計</span></p>
+
+        <div class="meta">
+          <dl>
+            <dt>制作期間</dt><dd>1ヶ月</dd>
+            <dt>制作人数</dt><dd>1人</dd>
+            <dt>使用ツール</dt><dd>Illustrator / Photoshop / Arduino IDE / Premiere Pro / Fusion 360 / trotec speedy 360（レーザーカッター）</dd>
+          </dl>
+        </div>
+      </div>
+      <!-- あとで assets/img/patacle/hero.jpg に差し替え -->
+      <div class="phero__photo" style="background:linear-gradient(160deg,#cdb392,#8a6238);color:#f3e9d8;">PATACLE 本体写真<br>(assets/img/patacle/hero.jpg)</div>
+    </div>
+  </header>
+
+  <!-- ===== CONCEPT ===== -->
+  <section class="sec">
+    <div class="wrap">
+      <p class="sec__eyebrow">Concept</p>
+      <h2 class="sec__title">パタパタ × 目覚まし時計</h2>
+      <p class="sec__lead">視覚的に楽しめて、ストレスの少ない目覚まし時計。木がぶつかり合う心地よい音と、連動してひっくり返っていく様子で、穏やかな朝を届けます。</p>
+    </div>
+  </section>
+
+  <!-- ===== BACKGROUND ===== -->
+  <section class="sec sec--tint">
+    <div class="wrap">
+      <p class="sec__eyebrow">Background</p>
+      <h2 class="sec__title">敏感な人のための、ストレスの少ない目覚まし時計</h2>
+      <p class="story">
+        近年、目覚まし時計の役割はスマートフォンが担うようになっています。決められた時間に人を起こすだけなら、スマホの一部機能で事足りてしまう。
+        しかしスマホを目覚ましに使うと、必然的にベッドに持ち込むことになり、心身に悪影響を及ぼします。<br><br>
+        そこで、<span class="accent">敏感な人のためのストレスの少ない目覚まし時計</span>を考えました。音の鳴る仕組みに採用したのは、<span class="accent">「板返し」</span>というからくりおもちゃ。
+        最上部の板をひっくり返すと、下の板も連動してひっくり返っていく昔ながらのおもちゃです。木がぶつかる音は心地よく、連動する様子は見ていて気持ちがいい。
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== CRAFTING ===== -->
+  <section class="sec">
+    <div class="wrap">
+      <p class="sec__eyebrow">Crafting</p>
+      <h2 class="sec__title">からくりと素材で、心地よさをつくる</h2>
+
+      <div class="feat">
+        <div class="feat__item">
+          <span class="feat__no">1</span>
+          <h4>板が裏返ると言葉が変わる</h4>
+          <p>板が順番に裏返ることで、“Time to wake up” から “Let the day begin” へと文字が切り替わる仕掛け。</p>
+        </div>
+        <div class="feat__item">
+          <span class="feat__no">2</span>
+          <h4>素材はヒノキ</h4>
+          <p>香りが良く、軽く打ち合わせると高い音が鳴るヒノキを採用。音と香りで五感に届く。</p>
+        </div>
+        <div class="feat__item">
+          <span class="feat__no">3</span>
+          <h4>組み立て式の設計</h4>
+          <p>全てのパーツに爪と窪みをつけ、接着に頼らない組み立て式に。焦げ目をあえて残し、継ぎ目を強調。</p>
+        </div>
+        <div class="feat__item">
+          <span class="feat__no">4</span>
+          <h4>くり抜きのロゴ</h4>
+          <p>彫刻ではなく“くり抜き”でロゴを表現。“Time to wake up” と “Let the day begin” の文字も彫刻。</p>
+        </div>
+        <div class="feat__item">
+          <span class="feat__no">5</span>
+          <h4>動きの機構</h4>
+          <p>ステッピングモーターとアトムライトを使用。半回転して逆向きに半回転を、2分間繰り返すプログラム。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROMOTION MOVIE ===== -->
+  <section class="sec sec--tint">
+    <div class="wrap">
+      <p class="sec__eyebrow">Promotion Movie</p>
+      <h2 class="sec__title">からくりとひっくり返って、こどもに返る</h2>
+
+      <!-- 動画：assets/video/patacle-promotion.mp4 を入れてください -->
+      <div class="video-wrap">
+        <video controls preload="metadata" poster="../assets/img/patacle/movie-poster.jpg">
+          <source src="../assets/video/patacle-promotion.mp4" type="video/mp4" />
+          お使いのブラウザは動画再生に対応していません。
+        </video>
+      </div>
+
+      <p class="video-copy">
+        パタパタ、カタカタ、懐かしくて心地いい。<br>
+        今日は何して遊ぼうか。<br>
+        大人だからって、急ぎすぎなくていい。<br>
+        みんなこどもだったんだから。
+      </p>
+
+      <h3 class="sec__title" style="margin-top:44px;">映像に込めた意図</h3>
+      <p class="story">
+        プロモーション映像制作では、モノの本質を見抜き、言語化し、<span class="accent">伝える力</span>を身につけました。
+        「自分がこの時計を通して解決したかった問題はなにか」「この時計の最大の魅力はなにか」を、何度も修正を繰り返して探りました。<br><br>
+        映像は、パタパタの動きに合わせて手書きのパラパラ漫画風に。主人公がパタパタの音を聞いて懐かしい昔の情景を思い出し、キャッチコピーに合わせて子供の姿に変わっていく構成にしています。
+      </p>
+
+      <div class="pager">
+        <a href="putica.html">← Putica</a>
+        <a href="../index.html#index">Index にもどる</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
