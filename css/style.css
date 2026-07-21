@@ -118,7 +118,7 @@ section { scroll-margin-top: 70px; }
 
 /* PORTFOLIO ワードマーク */
 .home__wordmark {
-  position: absolute; left: 8%; bottom: -2%;
+  position: absolute; left: 8%; bottom: 2%;
   font-family: "Poppins", sans-serif; font-weight: 700;
   font-size: clamp(48px, 9vw, 128px); letter-spacing: clamp(4px, 1.2vw, 18px);
   line-height: 1;
