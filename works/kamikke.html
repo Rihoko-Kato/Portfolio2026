@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kamikke（かみっけ）｜Rihoko Kato Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/work.css" />
+  <!-- Kamikke はパステル（ラベンダー×モーブ）の幻想的な配色 -->
+  <style>
+    :root { --warm: #7b7fb5; --warm-soft: #cdb9d8; --cream: #f3f1fa; }
+    .phero {
+      background:
+        radial-gradient(90% 80% at 78% 25%, rgba(226,190,205,.55), rgba(226,190,205,0) 55%),
+        radial-gradient(100% 90% at 20% 80%, rgba(150,160,214,.35), rgba(150,160,214,0) 55%),
+        linear-gradient(160deg, #f5f2fb 0%, #ece9f6 55%, #e3e0f1 100%);
+    }
+    .phero__logo { font-family: "Quicksand", sans-serif; font-weight: 700; color: #5a5e93; letter-spacing: 4px; text-shadow: 0 6px 18px rgba(90,94,147,.18); }
+    .pillar { background: radial-gradient(circle at 35% 25%, #d8c6e2, #7b7fb5); color: #fff; }
+    .answer { background: linear-gradient(135deg, #9a8fc4, #6b6f9e); box-shadow: 0 16px 40px rgba(107,111,158,.28); }
+    .site-cta { background: linear-gradient(135deg, #9a8fc4, #6b6f9e); box-shadow: 0 12px 30px rgba(107,111,158,.3); }
+    .feat__no { background: #cdb9d8; color: #4a3f5e; }
+    .sec__eyebrow { color: rgba(123,127,181,.20); }
+    .mincho { font-family: "Shippori Mincho", serif; }
+  </style>
+</head>
+<body class="work-page">
+
+  <nav class="work-nav">
+    <a href="../index.html#index" class="back">Index にもどる</a>
+    <span style="color:var(--ink-soft);font-size:13px;">05 / Kamikke</span>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="phero">
+    <div class="phero__grid">
+      <div>
+        <p class="phero__sub">いつもと少し違って見える風景には、実は神様がいるのかもしれない—</p>
+        <h1 class="phero__logo mincho">かみっけ</h1>
+        <p class="phero__tag">“神様をみる展示”</p>
+
+        <div class="meta">
+          <dl>
+            <dt>制作期間</dt><dd>1ヶ月</dd>
+            <dt>制作人数</dt><dd>3人</dd>
+            <dt>担当箇所</dt><dd>コンセプト設計／写真撮影／画像編集（イラスト書き入れ・レタッチ）／Webページ構築</dd>
+            <dt>使用ツール</dt><dd>Illustrator / Photoshop / Figma / VS Code / GitHub</dd>
+          </dl>
+        </div>
+      </div>
+      <!-- あとで assets/img/kamikke/hero.jpg に差し替え -->
+      <div class="phero__photo" style="background:linear-gradient(160deg,#c7c3e0,#8f93bd);color:#f2f1fa;">展示イメージ写真<br>(assets/img/kamikke/hero.jpg)</div>
+    </div>
+  </header>
+
+  <!-- ===== CONCEPT ===== -->
+  <section class="sec">
+    <div class="wrap">
+      <p class="sec__eyebrow">Concept</p>
+      <h2 class="sec__title">認識が変わると、風景も関係も変わる ―“神様をみる展示”</h2>
+      <p class="story">
+        私たちの行動や判断は、認識のわずかな差異によって大きく揺れ動きます。このような認識の変容は個人の内面に留まらず、
+        人と人との距離や社会のつながり方そのものを組み替えていく可能性がある。
+        <span class="accent">“神様を認識することによる見え方”</span> が私たちの行動や関係性にどのような変化をもたらすのかを、展示を通して探りました。<br><br>
+        普段使っている駅のホームに、今日は気まずい友達がいて。いつもと少し違って見える風景には、実は神様がいるのかもしれない。
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== WEBSITE ===== -->
+  <section class="sec sec--tint">
+    <div class="wrap">
+      <p class="sec__eyebrow">Website</p>
+      <h2 class="sec__title">来場者のコメントを集める体験サイト</h2>
+      <p class="sec__lead">体験について、来場者のコメントを収集するサイトを担当。フロントエンドからバックエンドまで、AIを駆使しながら制作しました。</p>
+      <a class="site-cta" href="https://rihoko-kato.github.io/Kamikke_form/" target="_blank" rel="noopener">フォームサイトを見る（Kamikke_form）</a>
+
+      <h3 class="sec__title" style="margin-top:40px;">画面設計のこだわり</h3>
+      <div class="feat">
+        <div class="feat__item"><span class="feat__no">1</span><h4>作品タイトル</h4><p>展示に合わせて、大きく明朝体で。</p></div>
+        <div class="feat__item"><span class="feat__no">2</span><h4>テーマカラー</h4><p>配布カードに合わせた3色で世界観を統一。</p></div>
+        <div class="feat__item"><span class="feat__no">3</span><h4>説明とお礼</h4><p>展示の補足と、回答のための説明を添えて。</p></div>
+        <div class="feat__item"><span class="feat__no">4</span><h4>フォームタイトル</h4><p>気軽に回答できるよう、ポップな表現に。</p></div>
+        <div class="feat__item"><span class="feat__no">5</span><h4>アイコンと例</h4><p>回答内容をイメージしやすく、アイコンと例文を用意。</p></div>
+        <div class="feat__item"><span class="feat__no">6</span><h4>送信ボタン</h4><p>見やすく、背景よりも明度を抑えた色に。</p></div>
+        <div class="feat__item"><span class="feat__no">7</span><h4>ふわふわ動く図形</h4><p>ふらっと現れる神様や、なんとなく嬉しくなるようなポジティブな気持ちをイメージ。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WEBSITE 機能 ===== -->
+  <section class="sec">
+    <div class="wrap">
+      <p class="sec__eyebrow">Function</p>
+      <h2 class="sec__title">世界を共有し、比べられる仕組み</h2>
+
+      <div class="cards2">
+        <div class="card">
+          <h4>回答の一覧表示</h4>
+          <p>自分の世界の共有と、他の人の世界の比較ができる。入力に迷った時のヒントにも。</p>
+        </div>
+        <div class="card">
+          <h4>詳細の表示 / 非表示</h4>
+          <p>画面をすっきりさせ、気になった箇所だけを、気になった人だけが読める。</p>
+        </div>
+        <div class="card">
+          <h4>GASによる自動記録</h4>
+          <p>GASをバックエンドとして活用し、Webフォームから送信されたコメントを、自動でスプレッドシートに記録する仕組みを実装。</p>
+        </div>
+        <div class="card">
+          <h4>体験設計</h4>
+          <p>日常で神様を探す第一歩として、「配布したカードと写真を撮って投稿する」までを展示の体験として設計。</p>
+        </div>
+      </div>
+
+      <div class="pager">
+        <a href="patacle.html">← PATACLE</a>
+        <a href="../index.html#index">Index にもどる</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
