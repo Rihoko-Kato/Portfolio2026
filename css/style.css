@@ -233,6 +233,13 @@ section { scroll-margin-top: 70px; }
   --star: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.7 1.4 6.8L12 17.8 5.9 20.5l1.4-6.8L2.2 9l6.9-.7z"/></svg>');
 }
 
+/* 画像を入れたら自動で表示（無ければグラデーションのまま） */
+.home__photo, .about__photo { position: relative; overflow: hidden; }
+.home__photo img, .about__photo img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; border-radius: inherit;
+}
+
 /* ============================================================
    03  INDEX / 目次
    ============================================================ */
